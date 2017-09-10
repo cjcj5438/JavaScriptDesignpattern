@@ -14,7 +14,7 @@ CheckObject = {
     },
     checkPassword: function () {
         console.log("验证密码")
-        return this
+        return this;
     }
 }
 CheckObject.checkPassword().checkName().checkEmail();
