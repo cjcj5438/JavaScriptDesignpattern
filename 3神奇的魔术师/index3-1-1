@@ -2,6 +2,6 @@
 var LoginAlert=function (text) {
     this.content=text;
 }
-LoginAlert.prototype.show=function () {
-    
+LoginAlert.prototype.show=function (a) {
+
 }

@@ -21,3 +21,4 @@ CheckObject.prototype = {
 //只要是原型创建的函数. 我们都要先new 一个实例在使用
 var b=new CheckObject();
 b.checkEmail().checkName().checkPassword()
+// w
