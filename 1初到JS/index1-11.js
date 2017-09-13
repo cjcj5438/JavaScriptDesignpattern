@@ -1,19 +1,17 @@
 /**
- * Created by chenjing on 2017/8/31.
- * 换一种方法使用
- * 一般我们在测试的时候,习惯于类式调用的方法
- * 这里我们简单的改下
+ * Created by chenjing on 2017/8/30.
+ * 初级声明函数
  */
-Function.prototype.addMethod=function (name,fn) {
-    this.prototype[name]=fn
-    return this
-}
-var methods=function(){};
-methods.addMethod('checkName',function () {
+/**
+ * 这里有三个函数:用于验证表单的情况
+ * 一般初级的js者都会这么创建函数
+ */
+function checkName() {
     console.log("验证姓名")
-}).addMethod('checkEmail',function () {
+}
+function checkEmail() {
     console.log("验证邮箱")
-});
-//这里是使用的时要new关键字下
-var m=new methods();
-m.checkEmail();
+}
+function checkPassword() {
+    console.log("验证密码")
+}
