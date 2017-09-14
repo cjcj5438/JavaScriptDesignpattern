@@ -1,11 +1,11 @@
 /**
  * Created by Administrator on 2017/9/13.
  */
-获取事件对象
+//获取事件对象
 var getEvent= function (event) {
     return event||window.event
 }
-获取元素
+//获取元素
 var getTarget= function (event) {
     return event.target||event.srcElement;
 }
