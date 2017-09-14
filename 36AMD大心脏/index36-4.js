@@ -65,9 +65,23 @@ var moduleCache = {};
 setModule = function (moduleName,params,callback) {
     loadModule= function (moduleName,params,callback) {
         var _module;
-        if(moduleCache[moduleName]){
-            setTimeout(callback(_module.exports),0)
-        }
+        if(moduleCache[moduleName]) {
+            _module=moduleCache[moduleName]
+            if(_module.status==='loaded'){
+                setTimeout(callback(_module.exports),0)
+            }else{
+                _module.onload.push(callback);
+            }
+        }else{
+            moduleCache[moduleName]={
+                moduleCache:moduleName,
+                status:'loading',
+                exports:null,
+                onload:[callback]
+            }
+        };
+        loadScript(getUrl(moduleName))
     }
-}
-
+};
+getUrl= function () {};
+loadScript=function(){};
