@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="div">我是div</button>
+<script src="AMD.js"></script>
+<script>
+    console.log(12344)
+    F.module(['lib/dom','lib/event'],function (dom,events) {
+        events.on('div','click',function () {
+            dom.html('div','success')1m nnnn
+        })
+    })
+</script>
+</body>
+</html>
